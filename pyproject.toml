@@ -1,6 +1,6 @@
 [project]
 name = "mcp"
-dynamic = ["version"]
+version = "1.6.0+streamable"
 description = "Model Context Protocol SDK"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -63,16 +63,8 @@ docs = [
 
 
 [build-system]
-requires = ["hatchling", "uv-dynamic-versioning"]
+requires = ["hatchling"]
 build-backend = "hatchling.build"
-
-[tool.hatch.version]
-source = "uv-dynamic-versioning"
-
-[tool.uv-dynamic-versioning]
-vcs = "git"
-style = "pep440"
-bump = true
 
 [project.urls]
 Homepage = "https://modelcontextprotocol.io"
@@ -113,5 +105,5 @@ filterwarnings = [
     # This should be fixed on Uvicorn's side.
     "ignore::DeprecationWarning:websockets",
     "ignore:websockets.server.WebSocketServerProtocol is deprecated:DeprecationWarning",
-    "ignore:Returning str or bytes.*:DeprecationWarning:mcp.server.lowlevel"
+    "ignore:Returning str or bytes.*:DeprecationWarning:mcp.server.lowlevel",
 ]
